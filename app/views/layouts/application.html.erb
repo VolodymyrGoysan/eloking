@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Eloboostv2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= yield %>
+  <head>
+    <title>Eloboostv2</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-</body>
+    <div class="content">
+
+      <%= render 'layouts/header' %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+
+      <div class="sub-footer"></div>
+    </div>
+
+    <%= render 'layouts/footer' %>
+
+  </body>
 </html>

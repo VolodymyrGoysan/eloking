@@ -1,0 +1,90 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* WRAPER */
+
+body,html {
+  background: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  height: 100%;
+}
+
+.navbar{
+  height: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+.content{
+  min-height: 100%;
+}
+
+* {margin: 0; padding: 0;}
+
+.sub-footer {
+  height: 190px; 
+}
+
+.footer { 
+  background: #333; 
+  height: 180px; 
+  margin-top: -180px;
+  border-top: 1px solid #666;
+}
+
+
+/* FORM PAGES */
+
+nav ul li{
+  text-decoration: none;
+  text-align: center;
+  color: #666666;
+  width: 200px; 
+  height: 43px;
+  margin: 6px auto;
+  position: inline;
+}
+
+.footer ul li{
+  position: inline;
+}
+
+.form {
+  text-align:center;
+  margin: 0 auto 10px;
+  padding: 20px 0 10px 0;
+  font-size: 16px;
+  width: 400px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  color: #555;
+  width: 100%;
+  border: 1px solid #E6E6E6;
+  border-right: 5px;
+  border-radius: 0px; 
+  height: 40px;
+  margin: 6px auto;
+  text-indent: 10px;
+}
+
+.btn-submit {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #c91717;
+  padding: 10px 20px;
+  border: 0;
+  margin-top: 6px;
+}
+  
+.root_image{
+	height: 150px;
+}
+
+.notice {
+  border: 1px solid #333;
+}
