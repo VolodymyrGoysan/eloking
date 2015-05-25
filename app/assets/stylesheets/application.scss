@@ -4,7 +4,7 @@
 /* WRAPER */
 
 body,html {
-  background: #999;
+  background: #999999;
   font-family: Arial, sans-serif;
   font-weight: bold;
   height: 100%;
@@ -12,10 +12,11 @@ body,html {
 }
 
 .navbar{
-  height: 150px;
+  height: 200px;
   margin: 0;
   padding: 0;
   width: 100%;
+  background-color: rgba(0,0,0,0.826);
 }
 
 .content{
@@ -25,13 +26,13 @@ body,html {
 * {margin: 0; padding: 0;}
 
 .sub-footer {
-  height: 190px; 
+  height: 240px; 
 }
 
 .footer { 
   background: #333; 
-  height: 180px; 
-  margin-top: -180px;
+  height: 280px; 
+  margin-top: -280px;
   border-top: 1px solid #666;
   width: 100%;
 }
@@ -46,12 +47,8 @@ body,html {
   height: 50px;
   margin: 6px auto;
   position: inline;
-  border-bottom: 2px solid #444;
+  border-bottom: 1px solid #444;
   text-transform: uppercase;
-  transition: background-color linear 1s;
-  &:hover{
-     transition-duration: 2s;
-  }
 }
 
 .footer ul li{
@@ -64,6 +61,21 @@ body,html {
   padding: 20px 0 10px 0;
   font-size: 16px;
   width: 400px;
+}
+
+.platform{
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid lightgray;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: #fff;
+  position: relative;
+  top: -40px;
+  min-width: 840px;
+  min-height: 600px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.7);
 }
 
 input[type=text],
@@ -96,10 +108,6 @@ input[type=password] {
   padding: 10px 20px;
 }
   
-.root_image{
-	height: 100px;
-  margin-left: 10%;
-}
 
 .notice, .alert{
   text-decoration: none;
@@ -121,45 +129,41 @@ input[type=password] {
   background-color: #999;
 }
 
-.platform{
-  height: 100%;
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  background: #fff;
-  position: relative;
-  top: -20px;
-  z-index: 2;
-  min-width: 840px;
-  min-height: 500px;
-}
-
 .pull-right{
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
-.calc{
-  width: 90%;
+.pull-left{
   margin-left: 5%;
-
-  table th, td{
-
-  }
-  .wdth{
-    width: 260px;
-    min-width: 30%;
-    padding: 15px;
-  }
-  .wdth1{
-    min-width: 100px;
-  }
-  .wdth2{
-    max-width: 150px;
-  }
 }
 
-.tabl{
-  min-width: 700px;
+.singedin{
+  color: #888;
+  font-size: 14px;
+  position: static;
+}
+
+.root_image{
+  height: 120px;
+  width: 400px;
+  margin-left: 5%;
+  position: static;
+}
+
+.container{
+  width: 100%;
+}
+
+.calc-form{
+  border: 1px solid #999;
+  border-radius: 5px;
+  min-width: 870px;
+}
+
+.calc-form-control{
+  max-width: 200px;
+}
+
+.min-width{
+  min-width: 300px;
 }

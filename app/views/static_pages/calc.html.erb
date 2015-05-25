@@ -1,72 +1,61 @@
 <div class="container">
 
-    <h2>Boosting divisions and leagues</h2>
+  <h2>Boosting divisions and leagues</h2>
 
-    <h1>IMAGE WILL BE HERE</h1>
+  <h1>IMAGE WILL BE HERE</h1>
 
+    <div class="col-sm-8 col-md-8 col-lg-12 calc-form">
 
-    <div class="calc">
-    <table class="tabl">
-      <tbody>
+        <table>
+          
+          <td>
+          <div class="min-width">
+          <h4>Current league &amp; division:</h4> 
 
-        <tr>
-          <td class="wdth"><div><h4>Current league &amp; division:</h4></div></td>
-          <td class="wdth1"></td>
-          <td class="wdth"><h4>Desired league &amp; division:</h4></td>
-          <td class="wdth"><h4>Calculator</h4></td>
-        </tr>
-
-        <tr>
-          <td class="wdth">
             <label>Select league &amp; division:</label>
             <p>
-              <select class="form-control wdth2">
+              <select class="form-control calc-form-control">
                 <% a = [['Bronze','1'],['Silver','2'],['Gold','3'],['Platinum','4'],['Diamond','5'],['Callenger','6']] %>
                 <%= options_for_select(a) %>
               </select>
 
-              <select class="form-control wdth2">
+              <select class="form-control calc-form-control">
                 <% b = [['Division 1','1'],['Division 2','2'],['Division 3','3'],['Division 4','4'],['Division 5','5']] %>
                 <%= options_for_select(b) %>
               </select>
             </p>
-
+          </div>
           </td>
 
-          <td class="wdth1"><%= image_tag('arrow.png', size: "100x90", alt: "arrow", class: 'arrow') %></td>
-
-          <td class="wdth">
+          <td>
+          <div class="min-width">
+            <h4>Desired league &amp; division:</h4>
             <label>Select league &amp; division:</label>
             <p>
-              <select class="form-control wdth2">
+              <select class="form-control calc-form-control">
                 <% c = [['Bronze','1'],['Silver','2'],['Gold','3'],['Platinum','4'],['Diamond','5'],['Callenger','6']] %>
                 <%= options_for_select(c) %>
               </select>
 
-              <select class="form-control wdth2">
+              <select class="form-control calc-form-control">
                 <% d = [['Division 1','1'],['Division 2','2'],['Division 3','3'],['Division 4','4'],['Division 5','5']] %>
                 <%= options_for_select(d) %>
               </select>
             </p>
-
+          </div>
           </td>
-          <td class="wdth">
+
+          <td>
+          <div class="min-width">
             <label>Serwer:</label>
-            <select class="form-control wdth2">
+            <select class="form-control calc-form-control">
               <% d = [['EU West','1'],['EU Nordic&amp;East','2'],['North America','3'],['Brazil','4'],['Russia','5'],['RLatin America North','6'],['Latin America South','7'],['Oceania','8'],['Turkey','9']] %>
               <%= options_for_select(d) %>
             </select>
-
             <button class="btn-info">Calculate</button>
+          </div>
           </td>
+        </table>
 
-        </tr>
-
-        <tr>
-
-        </tr>
-
-      </tbody>
-    </table>
-  </div>
+    </div>
 </div>
