@@ -4,16 +4,18 @@
 /* WRAPER */
 
 body,html {
-  background: #fff;
+  background: #999;
   font-family: Arial, sans-serif;
   font-weight: bold;
   height: 100%;
+  min-width: 1000px;
 }
 
 .navbar{
   height: 150px;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .content{
@@ -31,19 +33,25 @@ body,html {
   height: 180px; 
   margin-top: -180px;
   border-top: 1px solid #666;
+  width: 100%;
 }
 
 
 /* FORM PAGES */
 
-nav ul li{
-  text-decoration: none;
+.nav li{
   text-align: center;
-  color: #666666;
+  text-decoration: none;
   width: 200px; 
-  height: 43px;
+  height: 50px;
   margin: 6px auto;
   position: inline;
+  border-bottom: 2px solid #444;
+  text-transform: uppercase;
+  transition: background-color linear 1s;
+  &:hover{
+     transition-duration: 2s;
+  }
 }
 
 .footer ul li{
@@ -83,5 +91,69 @@ input[type=password] {
 }
   
 .root_image{
-	height: 150px;
+	height: 100px;
+  margin-left: 10%;
+}
+
+.notice, .alert{
+  text-decoration: none;
+  text-align: left;
+  font-size: 14px;
+}
+
+#error_explanation h2, ul{
+  margin-left: 20px;
+  text-decoration: none;
+  text-align: left;
+  font-size: 14px;
+}
+
+#error_explanation{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #666;
+  background-color: #999;
+}
+
+.platform{
+  height: 100%;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background: #fff;
+  position: relative;
+  top: -20px;
+  z-index: 2;
+  min-width: 800px;
+  min-height: 500px;
+  
+  table th, td{
+  border: 1px solid #999;
+  }
+  .wdth{
+    width: 300px;
+    min-width: 30%;
+    padding: 15px;
+  }
+  .wdth1{
+    min-width: 100px;
+  }
+  .wdth2{
+    max-width: 150px;
+  }
+}
+
+.pull-right{
+  margin-right: 10%;
+}
+
+.calc{
+  width: 90%;
+  margin-left: 5%;
+}
+
+.tabl{
+  min-width: 700px;
 }

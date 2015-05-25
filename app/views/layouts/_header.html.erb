@@ -2,15 +2,22 @@
   <div class="navbar-inner">
       <nav>
 
-        <%= link_to 'persons/profile' do %>
+        <%= link_to root_path do %>
           <%= image_tag('https://pp.vk.me/c624924/v624924934/31a15/1FzU7hpVdXo.jpg', class: 'root_image') %>
         <% end %>
           
         <% if user_signed_in? %>
-            <span>Hello, <%= current_user.email %></span>
-            <%= link_to 'Log out', destroy_user_session_path, :method => :delete %>
+        <p class="navbar-text">Signed in as <%= current_user.email %></p>
+        <ul class="nav nav-pills nav-stacked pull-right">
+            <li><%= link_to 'User', 'persons#profile' %></li>
+            <li<%= link_to 'Log out', destroy_user_session_path, :method => :delete %></li>
+          </ul>
+            
         <% else %>
-            <%= link_to 'Log in', new_user_session_path %> or <%= link_to 'Sign Up', new_user_registration_path %>
+          <ul class="nav nav-pills nav-stacked pull-right">
+            <li><%= link_to 'Log in', new_user_session_path %></li>
+            <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+          </ul>
         <% end %>
 
         </nav>
