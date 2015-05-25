@@ -21,20 +21,13 @@
             <label>Select league &amp; division:</label>
             <p>
               <select class="form-control wdth2">
-                <option>Bronze</option>
-                <option>Silver</option>
-                <option>Gold</option>
-                <option>Platinum</option>
-                <option>Diamond</option>
-                <option>Callenger</option>
+                <% a = [['Bronze','1'],['Silver','2'],['Gold','3'],['Platinum','4'],['Diamond','5'],['Callenger','6']] %>
+                <%= options_for_select(a) %>
               </select>
 
               <select class="form-control wdth2">
-                <option>Division 1</option>
-                <option>Division 2</option>
-                <option>Division 3</option>
-                <option>Division 4</option>
-                <option>Division 5</option>
+                <% b = [['Division 1','1'],['Division 2','2'],['Division 3','3'],['Division 4','4'],['Division 5','5']] %>
+                <%= options_for_select(b) %>
               </select>
             </p>
 
@@ -46,20 +39,13 @@
             <label>Select league &amp; division:</label>
             <p>
               <select class="form-control wdth2">
-                <option>Bronze</option>
-                <option>Silver</option>
-                <option>Gold</option>
-                <option>Platinum</option>
-                <option>Diamond</option>
-                <option>Callenger</option>
+                <% c = [['Bronze','1'],['Silver','2'],['Gold','3'],['Platinum','4'],['Diamond','5'],['Callenger','6']] %>
+                <%= options_for_select(c) %>
               </select>
 
               <select class="form-control wdth2">
-                <option>Division 1</option>
-                <option>Division 2</option>
-                <option>Division 3</option>
-                <option>Division 4</option>
-                <option>Division 5</option>
+                <% d = [['Division 1','1'],['Division 2','2'],['Division 3','3'],['Division 4','4'],['Division 5','5']] %>
+                <%= options_for_select(d) %>
               </select>
             </p>
 
@@ -67,15 +53,8 @@
           <td class="wdth">
             <label>Serwer:</label>
             <select class="form-control wdth2">
-              <option value="1">EU West</option>
-              <option value="2">EU Nordic&amp;East</option>
-              <option value="3">North America</option>
-              <option value="4">Brazil</option>
-              <option value="5">Russia</option>
-              <option value="6">Latin America North</option>
-              <option value="7">Latin America South</option>
-              <option value="8">Oceania</option>
-              <option value="9">Turkey</option>
+              <% d = [['EU West','1'],['EU Nordic&amp;East','2'],['North America','3'],['Brazil','4'],['Russia','5'],['RLatin America North','6'],['Latin America South','7'],['Oceania','8'],['Turkey','9']] %>
+              <%= options_for_select(d) %>
             </select>
 
             <button class="btn-info">Calculate</button>
@@ -83,10 +62,11 @@
 
         </tr>
 
-        <tr></tr>
+        <tr>
+
+        </tr>
 
       </tbody>
     </table>
-
   </div>
 </div>
