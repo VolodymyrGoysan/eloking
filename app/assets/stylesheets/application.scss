@@ -89,6 +89,12 @@ input[type=password] {
   border-right: 2px solid #555;
   margin-top: 6px;
 }
+
+.btn-info{
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
   
 .root_image{
 	height: 100px;
@@ -126,23 +132,8 @@ input[type=password] {
   position: relative;
   top: -20px;
   z-index: 2;
-  min-width: 800px;
+  min-width: 840px;
   min-height: 500px;
-  
-  table th, td{
-  border: 1px solid #999;
-  }
-  .wdth{
-    width: 300px;
-    min-width: 30%;
-    padding: 15px;
-  }
-  .wdth1{
-    min-width: 100px;
-  }
-  .wdth2{
-    max-width: 150px;
-  }
 }
 
 .pull-right{
@@ -152,6 +143,21 @@ input[type=password] {
 .calc{
   width: 90%;
   margin-left: 5%;
+
+  table th, td{
+
+  }
+  .wdth{
+    width: 260px;
+    min-width: 30%;
+    padding: 15px;
+  }
+  .wdth1{
+    min-width: 100px;
+  }
+  .wdth2{
+    max-width: 150px;
+  }
 }
 
 .tabl{

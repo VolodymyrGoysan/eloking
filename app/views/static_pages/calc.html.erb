@@ -10,15 +10,15 @@
       <tbody>
 
         <tr>
-          <td class="wdth"><div><h4>Current league and division</h4></div></td>
+          <td class="wdth"><div><h4>Current league &amp; division:</h4></div></td>
           <td class="wdth1"></td>
-          <td class="wdth"><h4>Desired league and division</h4></td>
+          <td class="wdth"><h4>Desired league &amp; division:</h4></td>
           <td class="wdth"><h4>Calculator</h4></td>
         </tr>
 
         <tr>
           <td class="wdth">
-            <label>Select league and division:</label>
+            <label>Select league &amp; division:</label>
             <p>
               <select class="form-control wdth2">
                 <option>Bronze</option>
@@ -40,10 +40,10 @@
 
           </td>
 
-          <td class="wdth1"></td>
+          <td class="wdth1"><%= image_tag('arrow.png', size: "100x90", alt: "arrow", class: 'arrow') %></td>
 
           <td class="wdth">
-            <label>Select league and division:</label>
+            <label>Select league &amp; division:</label>
             <p>
               <select class="form-control wdth2">
                 <option>Bronze</option>
@@ -77,6 +77,8 @@
               <option value="8">Oceania</option>
               <option value="9">Turkey</option>
             </select>
+
+            <button class="btn-info">Calculate</button>
           </td>
 
         </tr>
