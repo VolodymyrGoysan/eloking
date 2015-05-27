@@ -134,7 +134,7 @@ Devise.setup do |config|
   config.reset_password_keys = [ :email ]
 
   config.reset_password_within = 6.hours
-  config.sign_out_via = :get
+  config.sign_out_via = :delete
 
   #
   # When using omniauth, Devise cannot automatically set Omniauth path,

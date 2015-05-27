@@ -1,24 +1,36 @@
 <header class="navbar navbar-inverse">
   <div class="navbar-inner">
-      <nav>
+      <div class="row col-md-12">
 
-          <%= link_to root_path do %>
-            <%= image_tag('wor.png', class: 'root_image') %>
-          <% end %>
+          <%= link_to "ELOBOOST", root_path, class: 'btn-warning pull-left' %>
 
         <% if user_signed_in? %>
-          <ul class="nav nav-pills nav-stacked pull-right">
+          <ul class="nav nav-tabs pull-right">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About", static_pages_about_path %></li>
+            <li><%= link_to "Contact", static_pages_contact_path %></li>
+            <li><%= link_to "Calculator", static_pages_calc_path %></li>
             <li><%= link_to 'User', '#' %></li>
             <li><%= link_to 'Log out', destroy_user_session_path , :method => :delete %></li>
-            <li class="pull-right singedin"><%= current_user.email %></li>
           </ul>            
         <% else %>
-          <ul class="nav nav-pills nav-stacked pull-right">
+          <ul class="nav nav-tabs pull-right">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About", static_pages_about_path %></li>
+            <li><%= link_to "Contact", static_pages_contact_path %></li>
+            <li><%= link_to "Calculator", calc_users_path %></li>
             <li><%= link_to 'Log in', new_user_session_path %></li>
             <li><%= link_to 'Sign Up', new_user_registration_path %></li>
           </ul>
         <% end %>
+          
+      </div>
 
-        </nav>
+      <% if user_signed_in? %>
+      <ul class="pull-right nav">
+        <li class="pull-right singedin"><%= current_user.email %></li>
+      </ul>
+      <% end %>
+
   </div>
 </header>

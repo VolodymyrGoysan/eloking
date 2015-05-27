@@ -4,11 +4,15 @@
 /* WRAPER */
 
 body,html {
-  background: #999999;
-  font-family: Arial, sans-serif;
+  background: rgb(224,224,224);
+  font-family: Roboto Light, serif;
   font-weight: bold;
   height: 100%;
   min-width: 1000px;
+}
+
+table{
+
 }
 
 .navbar{
@@ -16,7 +20,7 @@ body,html {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: rgba(0,0,0,0.826);
+  background-color: rgba(0,0,0,0.8);
 }
 
 .content{
@@ -26,7 +30,7 @@ body,html {
 * {margin: 0; padding: 0;}
 
 .sub-footer {
-  height: 240px; 
+  height: 210px; 
 }
 
 .footer { 
@@ -34,20 +38,29 @@ body,html {
   height: 280px; 
   margin-top: -280px;
   border-top: 1px solid #666;
-  width: 100%;
+  margin-right: 5%;
+  margin-left: 5%;
+  box-shadow: 0 0 55px rgba(0,0,0,0.9);
 }
 
+.footer-text{
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #999;
+  line-height: 28px;
+  margin-top: 30px;
+  text-align: center;
+}
 
 /* FORM PAGES */
 
 .nav li{
   text-align: center;
   text-decoration: none;
-  width: 200px; 
+  min-width: 70px;
   height: 50px;
   margin: 6px auto;
   position: inline;
-  border-bottom: 1px solid #444;
   text-transform: uppercase;
 }
 
@@ -68,14 +81,14 @@ body,html {
   margin-left: 5%;
   margin-right: 5%;
   border: 1px solid lightgray;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background: #fff;
   position: relative;
-  top: -40px;
+  top: -70px;
   min-width: 840px;
   min-height: 600px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.7);
+  box-shadow: 0 0 55px rgba(0,0,0,0.7);
 }
 
 input[type=text],
@@ -89,6 +102,7 @@ input[type=password] {
   height: 40px;
   margin: 6px auto;
   text-indent: 10px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
 }
 
 .btn-submit {
@@ -97,9 +111,9 @@ input[type=password] {
   text-transform: uppercase;
   background: #c91717;
   padding: 10px 20px;
-  border-bottom: 2px solid #555;
-  border-right: 2px solid #555;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
   margin-top: 6px;
+  border: none;
 }
 
 .btn-info{
@@ -138,16 +152,28 @@ input[type=password] {
 }
 
 .singedin{
-  color: #888;
+  color: #999;
   font-size: 14px;
   position: static;
 }
 
-.root_image{
-  height: 120px;
-  width: 400px;
-  margin-left: 5%;
-  position: static;
+.btn-warning{
+  text-align: center;
+  height: 65px;
+  width: 280px;
+  background-color: rgba(0,150,255,1);
+  color: #000;
+  font-size: 45px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,200,255,0.9);
+  margin-top: 10px;
+  font-family: arial, serif;
+  font-style: italic;
+  &:hover{
+    background-color: rgba(0,170,255,1);
+    text-decoration: none;
+    color: #000;
+  }
 }
 
 .container{
@@ -158,12 +184,21 @@ input[type=password] {
   border: 1px solid #999;
   border-radius: 5px;
   min-width: 870px;
+  height: 100%;
 }
 
 .calc-form-control{
-  max-width: 200px;
+  max-width: 400px;
 }
 
 .min-width{
+  min-width: 450px;
+}
+
+#h_reg {
+  display: none;
+}
+
+.home-image{
   min-width: 300px;
 }

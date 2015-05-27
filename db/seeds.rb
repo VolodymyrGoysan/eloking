@@ -3,5 +3,4 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+leagues = League.create([{ name: 'Bronze', price: 100 }, { name: 'Silver', price: 200 }])
