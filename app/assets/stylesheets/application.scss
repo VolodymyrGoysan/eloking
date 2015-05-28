@@ -4,24 +4,48 @@
 /* WRAPER */
 
 body,html {
-  background: rgb(224,224,224);
+  background: rgb(0,0,0);
   font-family: Roboto Light, serif;
   font-weight: bold;
   height: 100%;
   min-width: 1000px;
 }
 
-table{
-
-}
-
 .navbar{
-  height: 200px;
+  height: 500px;
   margin: 0;
   padding: 0;
   width: 100%;
   background-color: rgba(0,0,0,0.8);
 }
+
+.btn-warning{
+  text-align: center;
+  height: 40px;
+  width: 220px;
+  background-color: rgba(0,150,255,1);
+  color: #000;
+  font-size: 33px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,200,255,0.9);
+  margin-top: 10px;
+  font-family: arial, serif;
+  font-style: italic;
+  position: absolute;
+  &:hover{
+    background-color: rgba(0,190,255,1);
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+.bk-image{
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  min-width: 1250px;
+}
+
 
 .content{
   min-height: 100%;
@@ -38,9 +62,11 @@ table{
   height: 280px; 
   margin-top: -280px;
   border-top: 1px solid #666;
-  margin-right: 5%;
-  margin-left: 5%;
   box-shadow: 0 0 55px rgba(0,0,0,0.9);
+  position: relative;
+  min-width: 1125px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .footer-text{
@@ -78,17 +104,17 @@ table{
 
 .platform{
   height: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
   border: 1px solid lightgray;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background: #fff;
   position: relative;
   top: -70px;
-  min-width: 840px;
+  min-width: 1125px;
   min-height: 600px;
   box-shadow: 0 0 55px rgba(0,0,0,0.7);
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 input[type=text],
@@ -157,25 +183,6 @@ input[type=password] {
   position: static;
 }
 
-.btn-warning{
-  text-align: center;
-  height: 65px;
-  width: 280px;
-  background-color: rgba(0,150,255,1);
-  color: #000;
-  font-size: 45px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,200,255,0.9);
-  margin-top: 10px;
-  font-family: arial, serif;
-  font-style: italic;
-  &:hover{
-    background-color: rgba(0,170,255,1);
-    text-decoration: none;
-    color: #000;
-  }
-}
-
 .container{
   width: 100%;
 }
@@ -200,5 +207,6 @@ input[type=password] {
 }
 
 .home-image{
-  min-width: 300px;
+  width: 90%;
+  margin-left: 15px;
 }

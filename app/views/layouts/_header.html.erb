@@ -2,14 +2,14 @@
   <div class="navbar-inner">
       <div class="row col-md-12">
 
+          <%= image_tag('fone2.png', class: 'bk-image') %>
           <%= link_to "ELOBOOST", root_path, class: 'btn-warning pull-left' %>
-
         <% if user_signed_in? %>
           <ul class="nav nav-tabs pull-right">
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "About", static_pages_about_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
-            <li><%= link_to "Calculator", static_pages_calc_path %></li>
+            <li><%= link_to "Calculator", calc_users_path %></li>
             <li><%= link_to 'User', '#' %></li>
             <li><%= link_to 'Log out', destroy_user_session_path , :method => :delete %></li>
           </ul>            
@@ -25,12 +25,5 @@
         <% end %>
           
       </div>
-
-      <% if user_signed_in? %>
-      <ul class="pull-right nav">
-        <li class="pull-right singedin"><%= current_user.email %></li>
-      </ul>
-      <% end %>
-
   </div>
 </header>
