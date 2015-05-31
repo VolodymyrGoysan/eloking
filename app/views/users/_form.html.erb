@@ -1,33 +1,70 @@
   <div class="container form">
     <h2>Sign up</h2>
 
-      <%= form_for @user, url: create_user_users_path do |f| %>
+      <% if user_signed_in? %>
+        <%= form_for @user, url: users_path, method: :put do |f| %>
 
         <%= f.select :current_league, collection: User::LEAGUES %>
 
         <%= f.select :current_division, collection: User::DIVISIONS %>
 
-
         <%= f.select :desired_league, collection: User::LEAGUES %>
 
         <%= f.select :desired_division, collection: User::DIVISIONS %>
 
+        <%= f.select :server, collection: User::SERVERS %>
+
+        <%= f.select :lp_per_win, collection: User::LP_PER_WIN %>
+
         <%= f.number_field :price, id:'calc_price', readonly: true%>
 
+          <div class='row'>
+            <div class='btn btn-default' id='show_reg'>Ok</div>
+          </div>
+
+
+          <div id="h_reg">
+            <%= f.submit "buy", class: 'btn-submit' %>
+          </div>
+        <% end %>
+
+      <% else %>
+        <%= form_for @user, url: create_user_users_path do |u| %>
+
+        <%= u.select :current_league, collection: User::LEAGUES %>
+
+        <%= u.select :current_division, collection: User::DIVISIONS %>
+
+        <%= u.select :desired_league, collection: User::LEAGUES %>
+
+        <%= u.select :desired_division, collection: User::DIVISIONS %>
+
+        <%= u.select :server, collection: User::SERVERS %>
+
+        <%= u.select :lp_per_win, collection: User::LP_PER_WIN %>
+
+        <%= u.number_field :price, id:'calc_price', readonly: true%>
+
         <div class='row'>
-          <div class='btn btn-default' id='show_reg'>ok</div>
+          <div class='btn btn-default' id='show_reg'>Ok</div>
         </div>
 
+          <div id="h_reg">
 
+            <%= u.text_field :nickname, autofocus: true, :placeholder => 'Nickname' %>
 
-        <div id="h_reg">
-            <%= f.email_field :email, autofocus: true, :placeholder => "Email" %>
+            <%= u.email_field :email, :placeholder => "Email", autocomplete: "on" %>
 
-            <%= f.password_field :password, autocomplete: "off", :placeholder => 'Password' %>
-            <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => 'Password confirmation' %>
+            <%= u.text_field :skype, :placeholder => 'Skype' %>
 
+            <%= u.password_field :password, autocomplete: "on", :placeholder => 'Password' %>
+            
+            <%= u.password_field :password_confirmation, autocomplete: "on", :placeholder => 'Password confirmation' %>
 
-            <%= f.submit "Sign up", class: 'btn-submit' %>
-        </div>
+            <%= u.submit "Buy", class: 'btn-submit' %>
+
+          </div>
+
+        <% end %>
       <% end %>
   </div>

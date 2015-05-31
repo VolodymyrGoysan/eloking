@@ -1,0 +1,48 @@
+<style type="text/css">
+  .with-border, tr, td{
+    border: 1px solid #333;
+    padding: 10px;
+  }
+  table {
+    border-collapse: collapse;
+    border-radius: 5px;
+  }
+  .marg li{
+    margin-left: -20px;
+  }
+</style>
+
+  <p>New oreder:</p>
+  <table class="with-border">
+   	<tr>
+      <td colspan='2'>
+        <ul class="marg">
+          <li>Email: <%= @user.email %></li>
+          <li>Nickname: <a href="http://eune.op.gg/summoner/userName=<%= @user.nickname %>"><%= @user.nickname %></a></li>
+          <li>Skype: <%= @user.skype %></li>
+     		</ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>From:</p>
+        <ul class="marg">
+          <li><%= @user.current_league_name %></li>
+          <li><%= @user.current_division_name %></li>
+        </ul>
+   		</td>
+      <td>
+        <p>To:</p>
+        <ul class="marg">
+          <li><%= @user.desired_league_name %></li>
+          <li><%= @user.desired_division_name %></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <p>Server: <%= @user.server %></p>
+        <p>Price: <%= @user.price %>$</p>
+      </td>
+    </tr>
+  </table>

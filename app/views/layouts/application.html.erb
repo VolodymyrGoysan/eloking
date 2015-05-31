@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Eloboostv2</title>
+    <title><%= 'Elo-king ' + yield(:title) %></title>
       <%= stylesheet_link_tag    'application' %>
       <%= javascript_include_tag 'application' %>
       <%= javascript_include_tag :defaults %>
       <%= csrf_meta_tags %>
+      <%= favicon_link_tag 'logo.png' %>
   </head>
   <body>
 

@@ -7,13 +7,14 @@ $('.users.calc').ready ->
 
 Users =
 
-	_selects: ['user_current_league', 'user_desired_league', 'user_current_division', 'user_desired_division']
+	_selects: ['user_current_league', 'user_desired_league', 'user_current_division', 'user_desired_division','user_lp_per_win']
 
 	_prices: [0, 10, 10, 10, 10, 15, 15, 15, 15, 15, 20, 25, 25, 25, 25, 30, 40, 40, 40, 40, 60, 100, 100, 100, 100, 400, 600 ]
 
 	calc: ->
 		@_show_reg_form()
 		@_select_changes()
+		@_calc_price()
 
 	_select_changes: ->
 		@_selects.forEach (e)->
@@ -30,6 +31,7 @@ Users =
 		cur_dv = $('#user_current_division').val()
 		des_lg = $('#user_desired_league').val()
 		des_dv = $('#user_desired_division').val()
+		lp = $('#user_lp_per_win').val()
 
 		if cur_lg == '5'
 			cur = 26
@@ -46,6 +48,11 @@ Users =
 		else
 			price = @_prices[cur...des].reduce (prev, cur) ->
 				prev + cur
+
+		if lp == '1'
+			price = price * 1
+		else
+			price = price * 1.25
 
 		$('#calc_price').val(price)
 
