@@ -6,4 +6,9 @@ class UserMailer < ApplicationMailer
   	@order_id = user.id
   	mail(to: 'naytlender@gmail.com', subject: "New order, id: #{@order_id}")
   end
+
+  def new_question(question)
+  	@question = question
+  	mail(to: 'naytlender@gmail.com', subject: "#{@question[:subject]}")
+  end
 end

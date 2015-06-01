@@ -35,4 +35,12 @@ class User < ActiveRecord::Base
     DIVISIONS.to_h.key(self.desired_division)
   end
 
+  def wins
+    @wins
+  end
+
+  def wins=(wins)
+    @wins = wins
+  end
+
 end

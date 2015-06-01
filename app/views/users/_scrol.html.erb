@@ -6,9 +6,7 @@
 
         <%= f.select :current_division, collection: User::DIVISIONS %>
 
-        <%= f.select :desired_league, collection: User::LEAGUES %>
-
-        <%= f.select :desired_division, collection: User::DIVISIONS %>
+        <%= f.range_field :wins, in: 0..20, step: '1' %>
 
         <%= f.select :server, collection: User::SERVERS %>
 
@@ -33,9 +31,7 @@
 
         <%= u.select :current_division, collection: User::DIVISIONS %>
 
-        <%= u.select :desired_league, collection: User::LEAGUES %>
-
-        <%= u.select :desired_division, collection: User::DIVISIONS %>
+        <%= u.range_field :wins, in: 0..20, step: '1' %>
 
         <%= u.select :server, collection: User::SERVERS %>
 

@@ -2,12 +2,11 @@ Rails.application.routes.draw do
   
   root to: 'static_pages#home'
 
-  get 'static_pages/about' => 'static_pages#about'
+  post 'message_sent' => 'static_pages#question_sent'
   get 'static_pages/contact' => 'static_pages#contact'
 
-  devise_for :users do
-    delete '/users/sign_out' => 'devise/sessions#destroy'
-  end
+  devise_for :users, controllers: {registrations: 'users/registrations', 
+    sessions: 'users/sessions'}
 
   resources :users do
   	get 'calc', on: :collection

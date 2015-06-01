@@ -5,30 +5,45 @@
     <hr />
   </div>
   <div class="row col-md-12">
-    <div class="col-md-2"></div>
-    <div class="col-md-5">
 
+    <div class="col-md-1"></div>
+
+    <div class="col-md-5 text-border form">
+      <h3>Send us your question:</h3>
+      <%= form_for :question, url: message_sent_path do |q| %>
+        <%= q.text_field :subject, :placeholder => 'Subject' %>
+        <%= q.email_field :my_email, :placeholder => 'Your email' %>
+        <%= q.text_area :message, size: '30x10', :placeholder => 'Your message', class: 'text_area' %>
+        <%= q.submit 'Sent', class: 'btn-submit' %>
+      <% end %>
     </div>
+
+    <div class="col-md-1"></div>
+
     <div class="col-md-4 text-border">
       <h3><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Information</h3>
-      <p>If you have any questions feel free to contact us.</p>
-      <p>We will reply to your email within next 12 hours.</p>
+      <h5>If you have any questions feel free to contact us.</h5>
+      <h5>We will reply to your email within next 12 hours.</h5>
       <br />
-      <p>Email:</p>
+      <h5>Email:</h5>
       <p class="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> supfastboost@gmail.com</p>
-      <p>Skype:</p>
+      <h5>Skype:</h5>
       <p class="email"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> supfastboost</p>
+      <h5>(Just add us to communicate faster.)</h5>
       <hr />
       <br />
       <h3><span class="glyphicon glyphicon-glass" aria-hidden="true"></span> Jobs</h3>
-      <p>We are looking for boosters from all regions!</p>
-      <p>Minimal Requirements:</p>
+      <h5>We are looking for boosters from all regions!</h5>
+      <h5>Minimal Requirements:</h5>
       <ul>
-        <li>Diamond I - rating.</li>
-        <li>Good communication skills</li>
+        <li><h5>Diamond I - min rating;</h5></li>
+        <li><h5>Good communication skills;</h5></li>
+        <li><h5>Good communication skills;</h5></li>
       </ul>
-      <p>Please contact us for more details.</p>
+      <h5>Please contact us for more details.</h5>
     </div>  
+
     <div class="col-md-1"></div>
+
   </div>
 </div>

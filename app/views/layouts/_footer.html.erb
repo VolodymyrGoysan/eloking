@@ -3,10 +3,26 @@
     <nav>
       <p class="footer-text">Eloboosters may help you to boost your elo, or do 10-20 wins in a row </p>
       <hr />
-      <ul>
-        <li><%= link_to "Contact", static_pages_contact_path %></li>
-        <li><%= link_to "Calculator", calc_users_path %></li>
-      </ul>
+      <div class="row col-md-12">
+        <div class="col-md-3 footer-text">
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Contact", static_pages_contact_path %></li>
+            <li><%= link_to "Boost", calc_users_path %></li>
+          </ul>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+          <%= form_for :question, url: message_sent_path do |q| %>
+            <%= q.text_field :subject, :placeholder => 'Subject' %>
+            <%= q.email_field :my_email, :placeholder => 'Email' %>
+        </div>
+            <div class="col-md-5">
+              <%= q.text_area :message, size: '30x10', :placeholder => 'Your message', class: 'footer-text-area' %>
+              <%= q.submit 'Sent', class: 'btn-submit' %>
+            </div>
+          <% end %>
+      </div>
     </nav>
   </div>
 </footer>

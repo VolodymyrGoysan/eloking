@@ -22,7 +22,7 @@ Users =
 				Users._calc_price()
 
 	_show_reg_form: ->
-		$('#show_reg').click ->
+		$('.show_reg').click ->
 			$('#h_reg').show()
 			$(@).hide()
 
@@ -55,5 +55,3 @@ Users =
 			price = price * 1.25
 
 		$('#calc_price').val(price)
-
-
