@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :users do
   	get 'calc', on: :collection
+    get 'calc_wins', on: :collection
   	post 'create_user', on: :collection
     put 'update', on: :collection
   end

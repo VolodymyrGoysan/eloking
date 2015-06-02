@@ -1,64 +1,88 @@
   <div class="container form">
       <% if user_signed_in? %>
-        <%= form_for @user, url: users_path, method: :put do |f| %>
 
-        <%= f.select :current_league, collection: User::LEAGUES %>
+      <div class="text-border">
 
-        <%= f.select :current_division, collection: User::DIVISIONS %>
+        <table class="calc-wins">
 
-        <%= f.range_field :wins, in: 0..20, step: '1' %>
+          <%= form_for @user, url: users_path, method: :put do |f| %>
 
-        <%= f.select :server, collection: User::SERVERS %>
+          <tr>
+            <td>League:</td>
+            <td><%= f.select :current_league, User::LEAGUES, {}, { :class => "form-control"} %></td>
+            <td colspan="2"><%= f.range_field :wins, min: 0, max: 20, :class => "form-control", id: "ranger" %></td>
 
-        <%= f.select :lp_per_win, collection: User::LP_PER_WIN %>
+          </tr>
 
-        <%= f.number_field :price, id:'calc_price', readonly: true%>
+          <tr>
+            <td>Division:</td>
+            <td><%= f.select :current_division, User::DIVISIONS, {}, { :class => "form-control"} %></td>
+            <td colspan="2">0</td>
+          </tr>
 
-          <div class='row'>
-            <div class='btn btn-default show_reg'>Ok</div>
-          </div>
+          <tr>
+            <td>Server:</td>
+            <td><%= f.select :server, User::SERVERS, {}, { :class => "form-control"} %></td>
 
+            <td><%= f.number_field :price, id:'calc_price', readonly: true, :class => "form-control" %></td>
+            <td><%= f.submit "buy", class: 'btn-submit' %></td>
+          </tr>
 
-          <div id="h_reg">
-            <%= f.submit "buy", class: 'btn-submit' %>
-          </div>
+        </table>
+
         <% end %>
+
+      </div>
+
 
       <% else %>
-        <%= form_for @user, url: create_user_users_path do |u| %>
 
-        <%= u.select :current_league, collection: User::LEAGUES %>
 
-        <%= u.select :current_division, collection: User::DIVISIONS %>
+      <div class="text-border">
 
-        <%= u.range_field :wins, in: 0..20, step: '1' %>
+        <table class="calc-wins">
 
-        <%= u.select :server, collection: User::SERVERS %>
+          <%= form_for @user, url: create_user_users_path, method: :put do |f| %>
 
-        <%= u.select :lp_per_win, collection: User::LP_PER_WIN %>
+          <tr>
+            <td>League:</td>
+            <td><%= f.select :current_league, User::LEAGUES, {}, { :class => "form-control"} %></td>
+            <td colspan="2"><%= f.range_field :wins, in: 0..20, step: '1', :class => "form-control" %></td>
+          </tr>
 
-        <%= u.number_field :price, id:'calc_price', readonly: true%>
+          <tr>
+            <td>Division:</td>
+            <td><%= f.select :current_division, User::DIVISIONS, {}, { :class => "form-control"} %></td>
+            <td colspan="2"></td>
+          </tr>   
 
-        <div class='row'>
-          <div class='btn btn-default show_reg'>Ok</div>
-        </div>
+          <tr>
+            <td>Server:</td>
+            <td><%= f.select :server, User::SERVERS, {}, { :class => "form-control"} %></td>
+            <td><%= f.number_field :price, id:'calc_price', readonly: true, :class => "form-control" %></td>
+            <td><div class='btn btn-default show_reg'>Ok</div></td>
+          </tr>
+
+        </table>
 
           <div id="h_reg">
 
-            <%= u.text_field :nickname, autofocus: true, :placeholder => 'Nickname' %>
+            <%= f.text_field :nickname, autofocus: true, :placeholder => 'Nickname' %>
 
-            <%= u.email_field :email, :placeholder => "Email", autocomplete: "on" %>
+            <%= f.email_field :email, :placeholder => "Email", autocomplete: "on" %>
 
-            <%= u.text_field :skype, :placeholder => 'Skype' %>
+            <%= f.text_field :skype, :placeholder => 'Skype' %>
 
-            <%= u.password_field :password, autocomplete: "on", :placeholder => 'Password' %>
+            <%= f.password_field :password, autocomplete: "on", :placeholder => 'Password' %>
             
-            <%= u.password_field :password_confirmation, autocomplete: "on", :placeholder => 'Password confirmation' %>
+            <%= f.password_field :password_confirmation, autocomplete: "on", :placeholder => 'Password confirmation' %>
 
-            <%= u.submit "Buy", class: 'btn-submit' %>
+            <%= f.submit "Buy", class: 'btn-submit' %>
 
           </div>
 
         <% end %>
+      </div>
+
       <% end %>
   </div>

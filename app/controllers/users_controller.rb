@@ -5,6 +5,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def calc_wins
+    @user = User.new
+  end
+
   def create_user
     @user = User.new(user_params)
       if @user.save

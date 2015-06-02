@@ -1,9 +1,9 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
+$("#slider").slider()
 $('.users.calc').ready ->
 	Users.calc()
-
 
 Users =
 
@@ -15,6 +15,7 @@ Users =
 		@_show_reg_form()
 		@_select_changes()
 		@_calc_price()
+		@_select_changes_wins_count()
 
 	_select_changes: ->
 		@_selects.forEach (e)->
@@ -55,3 +56,9 @@ Users =
 			price = price * 1.25
 
 		$('#calc_price').val(price)
+
+
+	_select_changes_wins_count: ->
+		$('#ranger').change ->
+			a = $('$ranger').val
+			console.log(a)
