@@ -1,31 +1,37 @@
 <footer class="footer">
   <div class="container">
     <nav>
-      <h4 class="footer-text">Elo-king PROVIDES LEAGUE OF LEGENDS BOOSTING servises - 
-GET ELO FOR THE BEST PRICES </h4>
+      <h4 class="footer-text">Elo-king PROVIDES LEAGUE OF LEGENDS BOOSTING servises - GET ELO FOR THE BEST PRICES </h4>
       <hr />
-      <div class="row col-md-12">
-        <div class="col-md-3 footer-text text-border footer-lis">
+
+      <div class="row col-xs-12">
+
+        <div class="col-xs-3 footer-text footer-lis">
           <ul>
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
             <li><%= link_to "Boost", calc_users_path %></li>
           </ul>
         </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-3">
-          <%= form_for :question, url: message_sent_path do |q| %>
-            <%= q.text_field :subject, :placeholder => 'Subject' %>
-            <%= q.email_field :my_email, :placeholder => 'Email' %>
-        </div>
-            <div class="col-md-4">
-              <%= q.text_area :message, size: '30x10', :placeholder => 'Your message', class: 'footer-text-area' %>
+
+        <div class="col-xs-2"></div>
+
+        <%= form_for :question, url: message_sent_path do |q| %>
+
+          <div class="col-xs-3">
+              <%= q.text_field :subject, :placeholder => 'Subject' %>
+              <%= q.email_field :my_email, :placeholder => 'Email' %>
               <%= q.submit 'Sent', class: 'btn-submit' %>
-            </div>
-          <% end %>
+          </div>
+          <div class="col-xs-4">
+            <%= q.text_area :message, size: '30x10', :placeholder => 'Your message', class: 'footer-text-area' %>
+          </div>
+
+        <% end %>
+
       </div>
 
-      <div class="row col-md-12">
+      <div class="row col-xs-12">
         <hr />
         <h5 class="h5color"> &copy 2015 All rights reserved to Elo-king.com - professional boosting of League of Legends accaunts.</h5>
       </div>

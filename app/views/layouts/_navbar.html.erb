@@ -1,11 +1,12 @@
 <header class="navbar navbar-inverse">
   <div class="navbar-inner">
-      <div class="row col-md-12">
+    <div class="row col-md-12">
 
-          <%= image_tag('fone2.png', class: 'bk-image') %>
-          <%= link_to "elo-king", root_path, class: 'btn-warning pull-left' %>
+      <%= link_to image_tag("logo.jpg", :border => 0, class: 'logo-img pull-left'), root_path %>
+
         <% if user_signed_in? %>
-          <ul class="nav nav-tabs pull-right">
+
+          <ul class="nav nav-tabs tabs pull-right">
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
             <li class="dropdown">
@@ -17,9 +18,11 @@
             </li>
             <li><%= link_to 'Setting', edit_user_registration_path(current_user) %></li>
             <li><%= link_to 'Log out', destroy_user_session_path , :method => :delete %></li>
-          </ul>            
+          </ul>     
+
         <% else %>
-          <ul class="nav nav-tabs pull-right">
+
+          <ul class="nav nav-tabs tabs pull-right">
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
             <li role="presentation" class="dropdown">
@@ -32,8 +35,9 @@
             <li><%= link_to 'Log in', new_user_session_path %></li>
             <li><%= link_to 'Sign Up', new_user_registration_path %></li>
           </ul>
+          
         <% end %>
           
-      </div>
+    </div>
   </div>
 </header>

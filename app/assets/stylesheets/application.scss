@@ -9,50 +9,22 @@
 
 body,html {
   background: rgb(0,0,0);
-
   font-weight: bold;
   height: 100%;
   min-width: 1000px;
 }
 
 .navbar{
-  height: 480px;
+  height: 230px;
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgb(255,255,255);
 }
 
-.btn-warning{
-  text-align: center;
-  height: 50px;
-  width: 220px;
-  background-color: rgba(0,150,255,1);
-  color: #000;
-  font-size: 33px;
-  border-radius: 3px;
-  box-shadow: 0 0 10px rgba(0,200,255,0.9);
-  margin-top: 10px;
-  font-family: arial, serif;
-  font-style: italic;
-  position: absolute;
-  top: -8px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px rgba(0,0,0,0.5);
-  &:hover{
-    background-color: rgba(0,190,255,1);
-    text-decoration: none;
-    color: #000;
-  }
+.tabs{
+  margin-top: 75px;
 }
-
-.bk-image{
-  position: fixed;
-  margin: 0;
-  width: 100%;
-  min-width: 1250px;
-}
-
 
 .content{
   min-height: 100%;
@@ -61,13 +33,13 @@ body,html {
 * {margin: 0; padding: 0;}
 
 .sub-footer {
-  height: 330px; 
+  height: 270px; 
 }
 
 .footer { 
   background: #444; 
-  height: 400px; 
-  margin-top: -400px;
+  height: 340px; 
+  margin-top: -340px;
   box-shadow: inset 0 0 160px rgba(0,0,0,0.7);
   position: relative;
   min-width: 1125px;
@@ -145,7 +117,7 @@ body,html {
   top: -70px;
   min-width: 1125px;
   min-height: 600px;
-  box-shadow: inset 0 0 45px rgba(0,0,0,0.6);
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -264,13 +236,18 @@ input[type=password]{
   width: 100%;
 }
 
+.contact-field{
+  max-width: 600px;
+}
+
 .calc-form{
   min-width: 870px;
   height: 100%;
 }
 
-.calc-form-control{
-  max-width: 400px;
+.form-control{
+  height: 60px;
+  font-size: 22px;
 }
 
 .min-width{
@@ -286,6 +263,11 @@ input[type=password]{
   margin-left: 25px;
   margin-top: 20px;
   max-width: 500px;
+}
+
+.logo-img{
+  max-height: 150px;
+  max-width: 400px;
 }
 
 .row{
@@ -308,10 +290,9 @@ hr{
 .text-border{
   border: 1px solid rgba(0,0,0,0.08);
   padding: 40px;
-  margin: 10px;
+  margin-bottom: 30px;
   border-radius: 2px;
   margin-left: 2px;
-  margin-bottom: 10px;
   box-shadow: 0 6px 6px rgba(0,0,0,0.4);
 }
 

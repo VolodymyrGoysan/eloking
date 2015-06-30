@@ -2,66 +2,98 @@
     <% if user_signed_in? %>
         
       <div class="text-border">
-
-      <table class="calc-wins">
         
         <%= form_for @user, url: users_path, method: :put do |f| %>
 
-        <tr>
-          <td><%= f.select :current_league, User::LEAGUES, {}, { :class => "form-control"} %></td>
-          <td><%= f.select :server, User::SERVERS, {}, { :class => "form-control"} %></td>
-          <td><%= f.select :desired_league, User::LEAGUES, {}, { :class => "form-control"} %></td>
-        </tr>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Current league:</h4>
+              <h3><%= f.select :current_league, User::LEAGUES, {}, { :class => "form-control"} %></h3>
+            </div>
+            <div class="col-md-4">
+              <h4>Server:</h4>
+              <h3><%= f.select :server, User::SERVERS, {}, { :class => "form-control"} %></h3>
+            </div>
+            <div class="col-md-4">
+              <h4>Desired league:</h4>
+              <h3><%= f.select :desired_league, User::LEAGUES, {}, { :class => "form-control"} %></h3>
+            </div>
+          </div>
 
-        <tr>
-          <td><%= f.select :current_division, User::DIVISIONS, {}, { :class => "form-control"} %></td>
-          <td><%= f.select :lp_per_win, User::LP_PER_WIN, {}, { :class => "form-control"} %></td>
-          <td><%= f.select :desired_division, User::DIVISIONS, {}, { :class => "form-control"} %></td>
-        </tr>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Current division:</h4>
+              <h3><%= f.select :current_division, User::DIVISIONS, {}, { :class => "form-control"} %></h3>
+            </div>
+            <div class="col-md-4">
+              <h4>Lp per win:</h4>
+              <h3><%= f.select :lp_per_win, User::LP_PER_WIN, {}, { :class => "form-control"} %></h3>
+            </div>
+            <div class="col-md-4">
+              <h4>Desired division:</h4>
+              <h3><%= f.select :desired_division, User::DIVISIONS, {}, { :class => "form-control"} %></h3>
+            </div>
+          </div>
 
-        <tr>
-          <td colspan="2"><%= f.number_field :price, id:'calc_price', readonly: true, :class => "form-control" %></td>
-          <td><%= f.submit "buy", class: 'btn-submit' %></td>
-        </tr>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" colspan="2"><%= f.number_field :price, id:'calc_price', readonly: true, :class => "form-control" %></div>         
+          </div>
 
-      </table>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><%= f.submit "buy", class: 'btn-submit' %></div>
+          </div>
 
         <% end %>
-
+        
       </div>
 
     <% else %>
 
       <div class="text-border">
-
-      <table class="calc-wins">
         
         <%= form_for @user, url: create_user_users_path, method: :put do |f| %>
 
-        <tr>
-          <td><h4>Current division & league</h4></td>
-          <td><h4>Server & Lp per win</h4></td>
-          <td><h4>Desired division & league</h4></td>
-        </tr>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Current league:</h4>
+              <h3><%= f.select :current_league, User::LEAGUES, {}, { :class => "form-control"} %></h3>
+            </div>
+            <div class="col-md-4">
+              <h4>Server:</h4>
+              <h3><%= f.select :server, User::SERVERS, {}, { :class => "form-control"} %></h3>
+            </div>
+            <div class="col-md-4">
+              <h4>Desired league:</h4>
+              <h3><%= f.select :desired_league, User::LEAGUES, {}, { :class => "form-control"} %></h3>
+            </div>
+          </div>
 
-        <tr>
-          <td><%= f.select :current_league, User::LEAGUES, {}, { :class => "form-control"} %></td>
-          <td><%= f.select :server, User::SERVERS, {}, { :class => "form-control"} %></td>
-          <td><%= f.select :desired_league, User::LEAGUES, {}, { :class => "form-control"} %></td>
-        </tr>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Current division:</h4>
+              <h3><%= f.select :current_division, User::DIVISIONS, {}, { :class => "form-control"} %></h3>
+            </div>
+            <div class="col-md-4">
+              <h4>Lp per win:</h4>
+              <h3><%= f.select :lp_per_win, User::LP_PER_WIN, {}, { :class => "form-control"} %></h3>
+            </div>
+            <div class="col-md-4">
+              <h4>Desired division:</h4>
+              <h3><%= f.select :desired_division, User::DIVISIONS, {}, { :class => "form-control"} %></h3>
+            </div>
+          </div>
 
-        <tr>
-          <td><%= f.select :current_division, User::DIVISIONS, {}, { :class => "form-control"} %></td>
-          <td><%= f.select :lp_per_win, User::LP_PER_WIN, {}, { :class => "form-control"} %></td>
-          <td><%= f.select :desired_division, User::DIVISIONS, {}, { :class => "form-control"} %></td>
-        </tr>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" colspan="2"><%= f.number_field :price, id:'calc_price', readonly: true, :class => "form-control" %></div>         
+          </div>
 
-        <tr>
-          <td colspan="2"><%= f.number_field :price, id:'calc_price', readonly: true, :class => "form-control" %></td>
-          <td><div class='btn btn-default show_reg'>Ok</div></td>
-        </tr>
-
-      </table>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><div class="btn btn-submit show_reg">Continue</div></div>
+          </div>
 
           <div id="h_reg">
 
