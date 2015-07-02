@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   validates :skype, presence: true
 
   DIVISIONS = (1..5).to_a.map! { |k| ["Division #{6 - k}", k] }
-  LEAGUES = [['Bronze', 0], ['Silver', 1], ['Gold', 2], ['Platinum', 3], ['Dimond', 4], ['Master', 5], ['Chalenger', 6]]
+  LEAGUES = [['Bronze', 0], ['Silver', 1], ['Gold', 2], ['Platinum', 3], ['Diamond', 4], ['Master', 5], ['Chalenger', 6]]
   SERVERS = [['Korea'],['EUW'],['Oceania'],['LAS'],['Russia'],['NA'],['EUNE'],['Brazil'],['LAN'],['Turkey']]
   LP_PER_WIN = [['More then 15',1], ['Less then 15', 1.25]]
 
