@@ -54,4 +54,5 @@ Users =
 		else
 			price = price * 1.25
 
-		$('#calc_price').val(price)
+		$('#calc_price').text("Price: " + price + " €")
+		$('#calc_price1').val(price)

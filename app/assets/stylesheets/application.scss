@@ -8,60 +8,29 @@
 /* WRAPER */
 
 body,html {
-  background: rgb(0,0,0);
+  background-color: #000;
   font-weight: bold;
   height: 100%;
   min-width: 1000px;
 }
+
+
+/////////////
+//// navbar
+/////////////
+
 
 .navbar{
   height: 230px;
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: rgb(255,255,255);
+  background-color: rgba(255,255,255,1);
 }
 
 .tabs{
   margin-top: 75px;
 }
-
-.content{
-  min-height: 100%;
-}
-
-* {margin: 0; padding: 0;}
-
-.sub-footer {
-  height: 270px; 
-}
-
-.footer { 
-  background: #444; 
-  height: 340px; 
-  margin-top: -340px;
-  box-shadow: inset 0 0 160px rgba(0,0,0,0.7);
-  position: relative;
-  min-width: 1125px;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.footer-text{
-  text-transform: uppercase;
-  font-size: 16px;
-  color: #999;
-  margin-top: 30px;
-  text-align: center;
-  text-shadow: 2px 2px rgba(0,0,0,0.5);
-  ul li{
-    text-decoration: none;
-    line-height: 30px;
-    text-align: center;
-  }
-}
-
-/* FORM PAGES */
 
 .nav li{
   text-align: center;
@@ -92,6 +61,39 @@ body,html {
   }
 }
 
+/////////////////
+/// footer
+/////////////////
+
+.sub-footer {
+  height: 270px; 
+}
+
+.footer { 
+  background: #444; 
+  height: 340px; 
+  margin-top: -340px;
+  box-shadow: inset 0 0 160px rgba(0,0,0,0.7);
+  position: relative;
+  min-width: 1125px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.footer-text{
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #999;
+  margin-top: 30px;
+  text-align: center;
+  text-shadow: 2px 2px rgba(0,0,0,0.5);
+  ul li{
+    text-decoration: none;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
 .footer ul li{
   position: inline;
 }
@@ -99,6 +101,29 @@ body,html {
 .footer-lis{
   left: 20px;
 }
+
+.footer-text-area {
+  color: #555;
+  width: 100%;
+  max-width: 100%;
+  max-height: 150px;
+  border: 1px solid #E6E6E6;
+  border-right: 5px;
+  border-radius: 2px; 
+  margin: 6px auto;
+  text-indent: 10px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+/////////////////////
+//// body + forms
+////////////////////
+
+.content{
+  min-height: 100%;
+}
+
+* {margin: 0; padding: 0;}
 
 .form {
   text-align:center;
@@ -108,32 +133,20 @@ body,html {
   width: 500px;
 }
 
+
+
 .platform{
   height: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background: #fff;
+  background: rgba(255,255,255,0.6);
   position: relative;
   top: -70px;
-  min-width: 1125px;
   min-height: 600px;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
   margin-left: 5%;
   margin-right: 5%;
-}
-
-input[type=text],
-input[type=email],
-input[type=password]{
-  color: #555;
-  width: 100%;
-  border: 1px solid #E6E6E6;
-  border-right: 5px;
-  border-radius: 0px; 
-  height: 40px;
-  margin: 6px auto;
-  text-indent: 10px;
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+  background-image: url(https://pp.vk.me/c629320/v629320472/81d3/kL8Ro8Ijac8.jpg);
 }
 
 .text_area {
@@ -150,14 +163,47 @@ input[type=password]{
   max-height: 2000px
 }
 
-.footer-text-area {
+.container{
+  width: 100%;
+}
+
+.contact-field{
+  max-width: 600px;
+}
+
+.calc-form{
+  min-width: 870px;
+  height: 100%;
+}
+
+.form-control{
+  height: 60px;
+  font-size: 22px;
+}
+
+.text-border{
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 2px;
+  margin-left: 2px;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.4);
+  background-color: rgba(255,255,255,0.9);
+}
+
+/////////////////////
+/// inputs + buttons
+/////////////////////
+
+input[type=text],
+input[type=email],
+input[type=password]{
   color: #555;
   width: 100%;
-  max-width: 100%;
-  max-height: 150px;
   border: 1px solid #E6E6E6;
   border-right: 5px;
-  border-radius: 2px; 
+  border-radius: 0px; 
+  height: 40px;
   margin: 6px auto;
   text-indent: 10px;
   box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
@@ -180,6 +226,9 @@ input[type=password]{
   padding: 10px 20px;
 }
   
+///////////////////
+/// messages
+///////////////////
 
 .notice{
   width: 100%;
@@ -218,6 +267,14 @@ input[type=password]{
   margin-right: 15px;
 }
 
+.centered{
+  text-align: center;
+}
+
+///////////////////
+/// elements + imgs
+///////////////////
+
 .pull-right{
   margin-right: 5%;
 }
@@ -232,29 +289,11 @@ input[type=password]{
   position: static;
 }
 
-.container{
-  width: 100%;
-}
-
-.contact-field{
-  max-width: 600px;
-}
-
-.calc-form{
-  min-width: 870px;
-  height: 100%;
-}
-
-.form-control{
-  height: 60px;
-  font-size: 22px;
-}
-
 .min-width{
   min-width: 450px;
 }
 
-#h_reg {
+#h_reg, #calc_price1{
   display: none;
 }
 
@@ -287,15 +326,6 @@ hr{
   color: #888;
 }
 
-.text-border{
-  border: 1px solid rgba(0,0,0,0.08);
-  padding: 40px;
-  margin-bottom: 30px;
-  border-radius: 2px;
-  margin-left: 2px;
-  box-shadow: 0 6px 6px rgba(0,0,0,0.4);
-}
-
 .email{
   font-size: 17px;
   text-transform: uppercase;
@@ -303,20 +333,5 @@ hr{
   color: rgba(0,0,0,0.6);
   &:hover{
     color: rgba(0,0,0,0.9);
-  }
-}
-
-.calc-wins{
-  td{
-    min-width: 180px;
-  }
-  tr{
-    height: 40px;
-  }
-  tr, td {
-    padding: 10px;
-  }
-  select, input, .btn{
-    box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
   }
 }

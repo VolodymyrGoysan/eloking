@@ -1,41 +1,43 @@
   <div class="container form">
-      <% if user_signed_in? %>
+    <% if user_signed_in? %>
 
       <div class="text-border">
 
-        <table class="calc-wins">
+        <%= form_for @user, url: users_path, method: :put do |f| %>
 
-          <%= form_for @user, url: users_path, method: :put do |f| %>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Current league:</h4>
+              <h3><%= f.select :current_league, User::LEAGUES, {}, { :class => "form-control"} %></h3>
+            </div>
+          </div>
 
-          <tr>
-            <td>League:</td>
-            <td><%= f.select :current_league, User::LEAGUES, {}, { :class => "form-control"} %></td>
-            <td colspan="2"><%= f.range_field :wins, min: 0, max: 20, :class => "form-control", id: "ranger" %></td>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Current division:</h4>
+              <h3><%= f.select :current_division, User::DIVISIONS, {}, { :class => "form-control"} %></h3>
+            </div>
+          </div>
 
-          </tr>
+          <div class="row">
+            <div class="col-md-4">
+              <h4>Server:</h4>
+              <h3><%= f.select :server, User::SERVERS, {}, { :class => "form-control"} %></h3>
+            </div>
+          </div>
 
-          <tr>
-            <td>Division:</td>
-            <td><%= f.select :current_division, User::DIVISIONS, {}, { :class => "form-control"} %></td>
-            <td colspan="2">0</td>
-          </tr>
-
-          <tr>
-            <td>Server:</td>
-            <td><%= f.select :server, User::SERVERS, {}, { :class => "form-control"} %></td>
-
-            <td><%= f.number_field :price, id:'calc_price', readonly: true, :class => "form-control" %></td>
-            <td><%= f.submit "buy", class: 'btn-submit' %></td>
-          </tr>
-
-        </table>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" colspan="2"><h4 id='calc_price'></h4></div>
+            <div><%= f.number_field :price, id: 'calc_price1', readonly: true %></div>   
+          </div>
 
         <% end %>
 
       </div>
 
 
-      <% else %>
+    <% else %>
 
 
       <div class="text-border">
